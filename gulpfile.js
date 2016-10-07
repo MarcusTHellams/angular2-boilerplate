@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     webpack = require('gulp-webpack');
 
-gulp.task('webserver', ['watch'], function () {
+gulp.task('webserver', ['webpack', 'watch'], function () {
     gulp.src('./')
         .pipe(webserver({
             livereload: true,
